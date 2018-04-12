@@ -1,0 +1,22 @@
+{% extends 'main.html'%}
+
+{% block news %}
+    <h4> {{ news.news_date }} </h4>
+    <h2> {{ news.news_title }} </h2>
+    <p> {{ news.news_text }} </p>
+    <hr>
+    <div class="col-md-12">
+    <h4>Comments:</h4>
+    {% for comment in comments %}
+        {{comment.comments_text}}
+        <hr>
+    {% endfor %}
+    </div>
+    <div class="col-md-4">
+    <form action="/news/addcomment/{{ news.id }}/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" class="btn btn-success" value="Add the comment">
+    </form>
+    </div>
+{% endblock %}
