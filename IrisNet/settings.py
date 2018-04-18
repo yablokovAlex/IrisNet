@@ -36,6 +36,10 @@ TEMPLATES_DIRS = (
 
 INSTALLED_APPS = [
     'news',
+    'userprofile',
+    'loginsystem',
+    'contacts',
+    'message',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -62,6 +66,12 @@ TEMPLATES = [
         'DIRS': [
                     '/Users/user/PycharmProjects/IrisNet/templates',
                     '/Users/user/PycharmProjects/IrisNet/news/templates/news',
+                    '/Users/user/PycharmProjects/IrisNet/loginsystem/templates/loginsystem',
+                    '/Users/user/PycharmProjects/IrisNet/userprofile/templates/userprofile',
+                    '/Users/user/PycharmProjects/IrisNet/usermessages/templates/usermessages',
+                    '/Users/user/PycharmProjects/IrisNet/contacts/templates/contacts',
+                    '/Users/user/PycharmProjects/IrisNet/message/templates/message',
+
         ],
         'APP_DIRS': True,
         'OPTIONS': {

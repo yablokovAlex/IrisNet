@@ -1,0 +1,46 @@
+{% extends 'main.html' %}
+
+{% block contacts %}
+<ul class="nav">
+    <div class="row">
+        <div class="col-md-1">
+            <li class="nav-item">
+                <a class="nav-link"><h6>#</h6></a>
+                {% for user in Users %}
+                <a class="nav-link">{{ user.id }}</a>
+                {% endfor %}
+            </li>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1">
+            <li class="nav-item">
+                <a class="nav-link"><h6>Username</h6></a>
+                {% for user in Users %}
+                <a class="nav-link" href="/message/{{ user.id }}">{{ user.username }}</a>
+                {% endfor %}
+            </li>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <li class="nav-item">
+                <a class="nav-link"><h6>First name</h6></a>
+                {% for user in Users %}
+                <a class="nav-link">{{ user.first_name }}</a>
+                {% endfor %}
+            </li>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <li class="nav-item">
+                <a class="nav-link"><h6>Email</h6></a>
+                {% for user in Users %}
+                <a class="nav-link">{{ user.email }}</a>
+                {% endfor %}
+            </li>
+        </div>
+    </div>
+</ul>
+{% endblock %}

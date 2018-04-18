@@ -1,0 +1,22 @@
+
+.tab .nav-tabs{
+     position: relative;
+     backgroud: #ffff00;
+}
+
+ .content{
+     padding: 30px 0 0 0;
+     margin-top: 5px;
+     position: relative;
+}
+
+.form-horizontal .form-control{
+    box-shadow: 2px;
+    border-radius: 20px;
+}
+
+.loginform {
+    padding: 70px 0 0 0;
+    margin-top: 5px;
+    position: relative;
+}

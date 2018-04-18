@@ -18,8 +18,13 @@ from django.conf.urls import url, include
 
 
 urlpatterns = [
+    url(r'^id/', include('userprofile.urls')),
     url(r'^admin', admin.site.urls),
     url(r'^basicview/', include('news.urls')),
-    url(r'^', include('news.urls'))
+    url(r'^auth/', include('loginsystem.urls')),
+    url(r'^message/',include('message.urls')),
+    url(r'^contacts/', include('contacts.urls')),
+    url(r'^', include('news.urls')),
+
 
 ]

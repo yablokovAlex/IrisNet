@@ -2,6 +2,7 @@
 {% load staticfiles %}
 
 {% block news %}
+<h3>News</h3>
 {% for new in news %}
 <h6>Дата публикации: {{ new.news_date }} </h6>
 <h4><a href="/news/get/{{ new.id }}/">{{ new.news_title }}</a></h4>

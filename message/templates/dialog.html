@@ -1,0 +1,14 @@
+{% extend 'main.html' %}
+{% block message %}
+<div class="container">
+    {% for chat in chats %}
+    <div class="row">
+        <div class="col-md-1">
+            <li class="nav-item">
+                {{ chat.id }}
+                {{}}
+            </li>
+        </div>
+    </div>
+</div>
+{% endblock %}

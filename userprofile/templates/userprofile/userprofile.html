@@ -1,0 +1,14 @@
+{% extends 'main.html'%}
+
+{% block userprofile %}
+<div class="conatiner">
+    <div class="row">
+        <div class="col">
+            <h3>Username: {{ user.username }} </h3>
+            <h4>{{ user.email }} </h4>
+            <p>Name: {{ user.first_name }} </p>
+            <p>Last name: {{ user.last_name }} </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
