@@ -54,3 +54,19 @@ def get_message(self, request, chat_id):
                 'form': MessageForm()
             }
         )
+
+def delete_dialog(chat_id, request):
+    try:
+        chat = Chat.objects.get(id=chat_id)
+        chat.delete()
+
+    except Chat.DoesNotExist:
+            chat = None
+
+    return render(
+        request,
+        'messages/messages.html',
+        {
+            'user': request.user,
+        }
+    )

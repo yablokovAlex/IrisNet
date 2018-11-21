@@ -2,10 +2,9 @@
 {% block message %}
 {% if not chat %}
     <div class="container">
-        {% trans "РќРµРІРѕР·РјРѕР¶РЅРѕ РЅР°С‡Р°С‚СЊ Р±РµСЃРµРґСѓ. РќРµ РЅР°Р№РґРµРЅ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РёР»Рё РІС‹ РЅРµ РёРјРµРµС‚Рµ РґРѕСЃС‚СѓРїР° Рє РґР°РЅРЅРѕР№ Р±РµСЃРµРґРµ." %}
+        {% trans "Невозможно начать беседу. Не найден пользователь или вы не имеете доступа к данной беседе." %}
     </div>
 {% else %}
-    {% load tz %}
     {% if chat %}
         <div id="messages" class="container">
             <div id="innerMessages">
@@ -20,7 +19,7 @@
             {% load bootstrap3 %}
             {% csrf_token %}
             {% bootstrap_form form %}
-            <button type="submit" class="btn btn-default btn-sm" onclick="return ETextEditor.validateForm('message-form')"><span class="ico ico-comment"></span>{% trans "РћС‚РїСЂР°РІРёС‚СЊ" %}</button>
+            <button type="submit" class="btn btn-default btn-sm" onclick="return ETextEditor.validateForm('message-form')"><span class="ico ico-comment"></span>{% trans "Отправить" %}</button>
         </form>
     </div>
 {% endif %}
